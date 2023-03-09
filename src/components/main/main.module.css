@@ -1,0 +1,23 @@
+.container {
+	width:100%;
+	display:flex;
+	justify-content:center;
+
+}
+
+.info {
+	display:flex;
+	flex-direction:column;
+	
+	padding-top:50px;
+	width: 1170px;
+	font-family:'Genos';
+}
+
+.degrees {
+	font-size:250px;
+}
+
+.desc {
+	font-size:60px
+}
