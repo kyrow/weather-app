@@ -1,7 +1,7 @@
 .container {
 	width:100%;
 	display:flex;
-	justify-content:center;
+	justify-content:space-around;
 
 }
 
@@ -10,8 +10,19 @@
 	flex-direction:column;
 	
 	padding-top:50px;
-	width: 1170px;
+	width: 300px;
 	font-family:'Genos';
+}
+
+.secondaryInfo {
+	border-radius:50px;
+	width:250px;
+	height:400px;
+	padding:50px 0;
+	background-color:#fff;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
 }
 
 .degrees {
@@ -20,4 +31,21 @@
 
 .desc {
 	font-size:60px
+}
+
+.Secdesc {
+	font-size:30px
+}
+
+.weatherType {
+	height:200px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	align-items: center;
+}
+
+.weatherIcon {
+	width:120px;
+	height:120px;
 }

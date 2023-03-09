@@ -7,8 +7,8 @@
 	height:200px;	
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #fff;
+::placeholder { 
+  color: #000;
   opacity: 1; 
 }
 
