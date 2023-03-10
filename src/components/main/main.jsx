@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./main.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCloud, faWind } from '@fortawesome/free-solid-svg-icons'
+import { faCloud, faWind, faCloudRain, faSnowflake, faSmog, faCloudSun } from '@fortawesome/free-solid-svg-icons'
 
 export function Main(data) {
 	return (
@@ -15,11 +15,56 @@ export function Main(data) {
 				</div>
 
 				<div className={styles.secondaryInfo}>
-					{data.data.weather ? 
+
 					<div className={styles.weatherType}>
-						<span ><FontAwesomeIcon className={styles.weatherIcon} icon = {faCloud} /> </span>
-						<span>{data.data.weather[0].main}</span>
-					</div>	: null}
+
+						{data.data.main ?
+							data.data.weather[0].main === 'Clouds' ?
+							<>
+							<span ><FontAwesomeIcon className={styles.weatherIcon} icon = {faCloud} /> </span>
+							<span>{data.data.weather[0].main}</span>
+							</>
+							: null
+						: null }	
+						
+						{data.data.main ?
+							(data.data.weather[0].main === 'Rain') ?
+							<>
+							<span ><FontAwesomeIcon className={styles.weatherIcon} icon = {faCloudRain} /> </span>
+							<span>{data.data.weather[0].main}</span>
+							</>
+							: null
+						: null }	
+						
+						{data.data.main ?
+							(data.data.weather[0].main === 'Snow') ?
+							<>
+							<span ><FontAwesomeIcon className={styles.weatherIcon} icon = {faSnowflake} /> </span>
+							<span>{data.data.weather[0].main}</span>
+							</>
+							: null
+						: null }	
+
+						{data.data.main ?	
+							(data.data.weather[0].main === 'Smoke') ?
+							<>
+							<span ><FontAwesomeIcon className={styles.weatherIcon} icon = {faSmog} /> </span>
+							<span>{data.data.weather[0].main}</span>
+							</>
+							: null
+						: null }			
+						
+						{data.data.main ?			
+							(data.data.weather[0].main === 'Clear') ?
+							<>
+							<span ><FontAwesomeIcon className={styles.weatherIcon} icon = {faCloudSun} /> </span>
+							<span>{data.data.weather[0].main}</span>
+							</>
+							: null
+						: null }	
+					
+					</div>
+					
 					{data.data.wind ? 
 					<div className={styles.weatherType}>
 					<span ><FontAwesomeIcon className={styles.weatherIcon} icon = {faWind} /> </span>
